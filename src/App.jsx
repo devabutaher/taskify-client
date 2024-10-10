@@ -1,16 +1,10 @@
-import { Button } from "@nextui-org/react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import routes from "./routes/routes";
 
 const App = () => {
-  return (
-    <div className="flex flex-col items-center justify-center h-screen gap-10">
-      <h1 className="text-center text-8xl">
-        Taski<span className="text-primary">fy</span>
-      </h1>
-      <Button color="primary" size="lg" className="rounded">
-        Add New Task
-      </Button>
-    </div>
-  );
+  const router = createBrowserRouter(routes);
+
+  return <RouterProvider router={router} />;
 };
 
 export default App;
